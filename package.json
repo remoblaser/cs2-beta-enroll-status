@@ -1,10 +1,12 @@
 {
-  "name": "cs2-checker",
+  "name": "cs2-beta-enroll-status",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/main.js",
+    "login": "node src/login.js"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +15,5 @@
     "globaloffensive": "^2.3.0",
     "steam-session": "^1.1.0",
     "steam-user": "^4.28.0"
-  },
-  "pkg": {
-    "scripts": "src/**/*.js",
-    "targets": [
-      "node14-linux-arm64"
-    ],
-    "outputPath": "dist"
   }
 }
