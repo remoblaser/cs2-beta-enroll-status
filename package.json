@@ -1,7 +1,7 @@
 {
   "name": "cs2-beta-enroll-status",
   "version": "1.0.0",
-  "description": "",
+  "description": "Small script to check if you are enrolled in the Counter-Strike 2 beta",
   "main": "src/main.js",
   "type": "module",
   "scripts": {
