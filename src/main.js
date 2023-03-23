@@ -40,5 +40,5 @@ client.on("receivedFromGC", (appid, messageType) => {
 });
 
 csgo.on("disconnectedFromGC", (reason) => {
-  console.log("Disconnected from CS:GO Game Coordinator. Reason:", reason);
+  console.error("Disconnected from CS:GO Game Coordinator. Reason:", reason);
 });

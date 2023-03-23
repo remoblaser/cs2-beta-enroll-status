@@ -20,11 +20,9 @@ session.on("authenticated", async () => {
 });
 
 session.on("timeout", () => {
-  console.log("This login attempt has timed out.");
-  reject();
+  console.error("This login attempt has timed out.");
 });
 
 session.on("error", (err) => {
-  console.log(`ERROR: This login attempt has failed! ${err.message}`);
-  reject(err);
+  console.error(`ERROR: This login attempt has failed! ${err.message}`);
 });
