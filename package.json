@@ -1,0 +1,24 @@
+{
+  "name": "cs2-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "globaloffensive": "^2.3.0",
+    "steam-session": "^1.1.0",
+    "steam-user": "^4.28.0"
+  },
+  "pkg": {
+    "scripts": "src/**/*.js",
+    "targets": [
+      "node14-linux-arm64"
+    ],
+    "outputPath": "dist"
+  }
+}
