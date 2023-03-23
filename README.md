@@ -20,7 +20,7 @@ It's used to store your `refreshToken` for subsuquent runs, this way you don't h
 
 ## Thanks
 
-Thanks to the wonderful folks for providing awesome packages:
+Thanks to [DoctorMcKay](https://github.com/DoctorMcKay) for these awesome node packages which basically do 99% of the job!
 
 - [node-globaloffensive](https://github.com/DoctorMcKay/node-globaloffensive)
 - [node-steam-session](https://github.com/DoctorMcKay/node-steam-session)
