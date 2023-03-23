@@ -3,7 +3,8 @@
 ## About
 
 This little script is meant to check your CS2 Beta Enrollment Status by reading messages from the CS:GO Game Coordinator.
-In case you have received an invite, you should receive a message type `9217`
+In case you have received an invite, you should receive a message type `9217`.
+It's meant as an alternative to starting CS:GO over and over again.
 
 ## How to use
 
@@ -14,7 +15,8 @@ In case you have received an invite, you should receive a message type `9217`
 
 ## !!!WARNING!!!
 
-The script saves a temp file inside `temp/token.json`. NEVER EVER give this to someone else as he'll be able to access your steam account! Keep it secret!
+The script creates a temp file: `temp/token.json`. NEVER EVER give this to someone else as he'll be able to access your steam account! Keep it secret!
+It's used to store your `refreshToken` for subsuquent runs, this way you don't have to login again if you rerun the script.
 
 ## Thanks
 
