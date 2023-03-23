@@ -12,6 +12,10 @@ In case you have received an invite, you should receive a message type `9217`
 - Run `npm run login` in order to receive a refresh token from Steam. Follow the instructions by scanning the QR code with your steam mobile app and you're logged in.
 - Run `npm run main` - if you see `[message] {userName} RECEIVED BETA INVITE` you should be in! Happy Fragging!
 
+## !!!WARNING!!!
+
+The script saves a temp file inside `temp/token.json`. NEVER EVER give this to someone else as he'll be able to access your steam account! Keep it secret!
+
 ## Thanks
 
 Thanks to the wonderful folks for providing awesome packages:
