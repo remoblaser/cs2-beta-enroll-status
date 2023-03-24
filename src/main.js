@@ -29,7 +29,7 @@ setInterval(() => {
 
 client.on("loggedOn", () => {
   logger.info("Logged into Steam successfully.");
-  logger.info("This script will automatically relog every 15 minutes.");
+  logger.info("This script will automatically relog every 30 minutes.");
   client.setPersona(SteamUser.EPersonaState.Online);
   client.gamesPlayed([730]);
 });
