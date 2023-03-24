@@ -1,18 +1,14 @@
 import { EAuthTokenPlatformType, LoginSession } from "steam-session";
 import { writeRefreshToken } from "./utils/token.js";
-
-const QR_CODE_SERVICE_URL =
-  "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=";
+import qrcode from "qrcode-terminal";
 
 const session = new LoginSession(EAuthTokenPlatformType.SteamClient);
 session.loginTimeout = 120000;
 
 const challenge = await session.startWithQR();
 
-const qrUrl =
-  QR_CODE_SERVICE_URL + encodeURIComponent(challenge.qrChallengeUrl);
-
-console.log(`Open QR code: ${qrUrl}`);
+console.log("Scan QR code with your steam mobile app");
+qrcode.generate(challenge.qrChallengeUrl);
 
 session.on("authenticated", async () => {
   writeRefreshToken(session.refreshToken);

@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "globaloffensive": "^2.3.0",
+    "qrcode-terminal": "^0.12.0",
     "steam-session": "^1.1.0",
     "steam-user": "^4.28.0"
   }
