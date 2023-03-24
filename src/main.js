@@ -47,7 +47,7 @@ csgo.on("connectedToGC", () => {
 client.on("receivedFromGC", (appid, messageType) => {
   logger.info(`Received: ${appid}, ID: ${messageType}`);
   if (messageType == BETA_ENROLL_MESSAGE_TYPE) {
-    logger.warn(`${userName} RECEIVED BETA INVITE!`);
+    logger.warn(`RECEIVED BETA INVITE!`);
   }
 });
 
