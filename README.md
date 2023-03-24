@@ -12,6 +12,7 @@ It's meant as an alternative to starting CS:GO over and over again.
 - Run `npm install`
 - Run `npm run login` in order to receive a refresh token from Steam. Follow the instructions by scanning the QR code with your steam mobile app and you're logged in.
 - Run `npm run start` - if you see `[message] {userName} RECEIVED BETA INVITE` you should be in! Happy Fragging!
+- Note: The script relogs every thirty minutes in order to "restart CS:GO" to check again.
 
 ## !!!WARNING!!!
 
@@ -25,3 +26,5 @@ Thanks to [DoctorMcKay](https://github.com/DoctorMcKay) for these awesome node p
 - [node-globaloffensive](https://github.com/DoctorMcKay/node-globaloffensive)
 - [node-steam-session](https://github.com/DoctorMcKay/node-steam-session)
 - [node-steam-user](https://github.com/DoctorMcKay/node-steam-user)
+
+## Selfplug

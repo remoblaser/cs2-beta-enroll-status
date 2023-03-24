@@ -4,7 +4,7 @@ import { readRefreshToken } from "./utils/token.js";
 import { createLogger } from "./utils/logger.js";
 
 const BETA_ENROLL_MESSAGE_TYPE = 9217;
-const FIFTEEN_MINUTES = 900000;
+const THIRTY_MINUTES = 900000 * 2;
 
 const logger = createLogger("main");
 
@@ -25,7 +25,7 @@ client.logOn({
 setInterval(() => {
   logger.info("Restarting CS:GO game coordinator");
   client.relog();
-}, FIFTEEN_MINUTES);
+}, THIRTY_MINUTES);
 
 client.on("loggedOn", () => {
   logger.info("Logged into Steam successfully.");
