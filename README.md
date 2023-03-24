@@ -11,7 +11,7 @@ It's meant as an alternative to starting CS:GO over and over again.
 - Clone the repository
 - Run `npm install`
 - Run `npm run login` in order to receive a refresh token from Steam. Follow the instructions by scanning the QR code with your steam mobile app and you're logged in.
-- Run `npm run main` - if you see `[message] {userName} RECEIVED BETA INVITE` you should be in! Happy Fragging!
+- Run `npm run start` - if you see `[message] {userName} RECEIVED BETA INVITE` you should be in! Happy Fragging!
 
 ## !!!WARNING!!!
 
