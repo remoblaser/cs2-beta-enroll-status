@@ -30,3 +30,5 @@ Thanks to [DoctorMcKay](https://github.com/DoctorMcKay) for these awesome node p
 - [node-steam-user](https://github.com/DoctorMcKay/node-steam-user)
 
 ## Selfplug
+
+[Twitter for more](https://twitter.com/remoblaser)
