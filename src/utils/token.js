@@ -1,12 +1,16 @@
 import { readFileSync, writeFileSync } from "fs";
 
-export const writeRefreshToken = (refreshToken) => {
-  writeFileSync("./temp/token.json", JSON.stringify({ refreshToken }));
+const getFileName = (user) => {
+  return user ? `./temp/token-${user}.json` : "./temp/token.json";
+}
+
+export const writeRefreshToken = (refreshToken, user = null) => {
+  writeFileSync(getFileName(user), JSON.stringify({ refreshToken }));
 };
 
-export const readRefreshToken = () => {
+export const readRefreshToken = (user = null) => {
   try {
-    const tokenRaw = readFileSync("./temp/token.json");
+    const tokenRaw = readFileSync(getFileName(user));
     const token = JSON.parse(tokenRaw);
     return token.refreshToken;
   } catch (err) {

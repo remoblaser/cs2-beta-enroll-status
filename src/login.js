@@ -3,7 +3,8 @@ import { writeRefreshToken } from "./utils/token.js";
 import qrcode from "qrcode-terminal";
 import { createLogger } from "./utils/logger.js";
 
-const logger = createLogger("login");
+const USER = process.env.USER ?? null;
+const logger = createLogger("login", USER);
 
 const session = new LoginSession(EAuthTokenPlatformType.SteamClient);
 session.loginTimeout = 120000;
@@ -14,7 +15,7 @@ logger.info("Scan QR code with your steam mobile app");
 qrcode.generate(challenge.qrChallengeUrl);
 
 session.on("authenticated", async () => {
-  writeRefreshToken(session.refreshToken);
+  writeRefreshToken(session.refreshToken, USER);
   logger.info("Login successful, you can now run: npm run start");
 });
 

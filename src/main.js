@@ -3,15 +3,17 @@ import GlobalOffensive from "globaloffensive";
 import { readRefreshToken } from "./utils/token.js";
 import { createLogger } from "./utils/logger.js";
 
+const USER = process.env.USER ?? null;
+
 const BETA_ENROLL_MESSAGE_TYPE = 9217;
 const THIRTY_MINUTES = 900000 * 2;
 
-const logger = createLogger("main");
+const logger = createLogger("main", USER);
 
 const client = new SteamUser();
 const csgo = new GlobalOffensive(client);
 
-const refreshToken = readRefreshToken();
+const refreshToken = readRefreshToken(USER);
 
 if (!refreshToken) {
   logger.error("No refresh token found. Please run `npm run login` first.");
