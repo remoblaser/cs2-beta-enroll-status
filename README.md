@@ -6,6 +6,8 @@ This little script is meant to check your CS2 Beta Enrollment Status by reading 
 In case you have received an invite, you should receive a message type `9217`.
 It's meant as an alternative to starting CS:GO over and over again.
 
+USE AT YOUR OWN RISK. So far noone reported any problems but we simply don't know if Valve is fine with us logging in every 30 seconds and starting CS:GO automated.
+
 ## How to use
 
 - Clone the repository
