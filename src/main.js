@@ -1,7 +1,7 @@
-import SteamUser from "steam-user";
 import GlobalOffensive from "globaloffensive";
-import { readRefreshToken } from "./utils/token.js";
+import SteamUser from "steam-user";
 import { createLogger } from "./utils/logger.js";
+import { readRefreshToken } from "./utils/token.js";
 
 const BETA_ENROLL_MESSAGE_TYPE = 9217;
 const THIRTY_MINUTES = 900000 * 2;
@@ -24,18 +24,23 @@ client.logOn({
 
 setInterval(() => {
   logger.info("Restarting CS:GO game coordinator");
-  client.relog();
+  user.gamesPlayed([]);
 }, THIRTY_MINUTES);
 
 client.on("loggedOn", () => {
   logger.info("Logged into Steam successfully.");
   logger.info("This script will automatically relog every 30 minutes.");
   client.setPersona(SteamUser.EPersonaState.Online);
-  client.gamesPlayed([730]);
 });
 
 client.on("error", (error) => {
   logger.error(`An error occurred: ${error.message}`);
+});
+
+client.on("playingState", (blocked, playingApp) => {
+  if (playingApp === 0) {
+    client.gamesPlayed(730);
+  }
 });
 
 csgo.on("connectedToGC", () => {
