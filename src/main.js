@@ -24,7 +24,7 @@ client.logOn({
 
 setInterval(() => {
   logger.info("Restarting CS:GO game coordinator");
-  user.gamesPlayed([]);
+  client.gamesPlayed([]);
 }, THIRTY_MINUTES);
 
 client.on("loggedOn", () => {
